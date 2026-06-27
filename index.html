@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samuel Machado - Editor de Video</title>
+  <title>Samuel Arboleda - Editor de Video</title>
   <link rel="stylesheet" href="landing.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +11,7 @@
     </head>
 <body>
  
-  <!-- NAV -->
+ <!-- NAV -->
   <nav id="navbar">
     <a href="#inicio" class="nav-brand">
       <img src="IMG_20260311_201438.jpg" alt="Samuel" class="nav-avatar" />
@@ -38,10 +38,11 @@
  
   <!-- HERO -->
   <section id="inicio">
+    <div id="heroContent" style="display:flex;flex-direction:column;align-items:center;width:100%;transition:opacity .1s linear, transform .1s linear;">
     <div class="hero-badge">EDITOR &amp; CREADOR DE CONTENIDO</div>
     <h1 class="hero-title">SAMUEL<br><span class="blue">MACHADO</span></h1>
     <div class="tool-badges">
-      <div class="tool-badge dr">DR</div>
+      <img src="DaVinci_Resolve_Studio.png" alt="DaVinci Resolve" style="width:56px;height:56px;border-radius:14px;object-fit:cover;opacity:0;animation:fadeUp .7s .55s ease forwards;" />
     </div>
     <p class="hero-sub">
       Transformo tus videos en grabaciones que <span class="hl">atrapan y venden</span>.<br>
@@ -59,6 +60,7 @@
         Tu navegador no soporta el video.
       </video>
     </div>
+    </div>
  
     <div class="scroll-arrow">↓</div>
   </section>
@@ -68,9 +70,9 @@
     <h2 class="section-title"><span class="blue">Trabajos</span></h2>
     <div class="proyectos-grid">
  
-      <div class="proyecto-card" data-src="REEL IG 4.mov">
-        <video muted loop preload="none" playsinline>
-          <source src="REEL IG 4.mov" type="video/mov">
+      <div class="proyecto-card" data-src="IG REEL 1.1.mov">
+        <video muted loop preload="metadata" playsinline>
+          <source src="IG REEL 1.1.mov" type="video/mp4">
         </video>
         <div class="play-overlay">
           <div class="play-btn">
@@ -80,7 +82,7 @@
       </div>
  
       <div class="proyecto-card" data-src="SHORT 1.mov">
-        <video muted loop preload="none" playsinline>
+        <video muted loop preload="metadata" playsinline>
           <source src="SHORT 1.mov" type="video/mp4">
         </video>
         <div class="play-overlay">
@@ -90,9 +92,9 @@
         </div>
       </div>
  
-      <div class="proyecto-card" data-src="VIDEO 12.mov">
-        <video muted loop preload="none" playsinline>
-          <source src="VIDEO 12.mov" type="video/mp4">
+      <div class="proyecto-card" data-src="Video Editor Showreel 2023.mp4">
+        <video muted loop preload="metadata" playsinline>
+          <source src="Video Editor Showreel 2023.mp4" type="video/mp4">
         </video>
         <div class="play-overlay">
           <div class="play-btn">
@@ -102,7 +104,7 @@
       </div>
  
       <div class="proyecto-card" data-src="ANTES Y DESPUES WILLIREX (1).mp4">
-        <video muted loop preload="none" playsinline>
+        <video muted loop preload="metadata" playsinline>
           <source src="ANTES Y DESPUES WILLIREX (1).mp4" type="video/mp4">
         </video>
         <div class="play-overlay">
@@ -136,11 +138,11 @@
           Me encanta transformar ideas en videos que atrapan desde el primer segundo.
         </p>
         <p>
-          Me he educado autodidácticamente por más de 2 años para hacer que tus videos
+          Me he educado autodidácticamente por más de 1 año para hacer que tus videos
           pasen de normal a profesional.
         </p>
         <div class="sobre-vision">
-          Quedarás satisfecho.
+          Que cada cliente esté satisfecho con sus videos
         </div>
       </div>
     </div>
@@ -171,7 +173,7 @@
  
   <!-- CONTACTO -->
   <section id="contacto">
-    <h2 class="contacto-title">Trabajemos<br><span class="blue">Juntos.</span></h2>
+    <h2 class="contacto-title">Trabajemos<br><span class="blue">juntos.</span></h2>
     <div class="contacto-btns">
  
       <a href="https://wa.me/573117426248?text=Hola%20Samuel,%20quiero%20saber%20más%20sobre%20tus%20servicios%20de%20edición%20de%20video." target="_blank" class="btn-primary" style="display:flex;align-items:center;gap:.6rem;">
@@ -199,8 +201,7 @@
       <a href="#trabajos">Trabajos</a>
       <a href="#sobre-mi">Sobre mí</a>
     </div>
-    <p class="footer-copy">© 2026 Samuel Arboleda. Todos los derechos reservados.</p>
+    <p class="footer-copy">© 2026 Samuel Machado. Todos los derechos reservados.</p>
   </footer>
-   <script src="./animations.js"></script>
-  </body>
-</html>
+  <script src="animations.js"></script>
+ </body>
