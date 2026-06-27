@@ -1,10 +1,16 @@
 /* ===== HAMBURGER ===== */
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
+ 
+    function toggleMobileMenu(e) {
+      if (e) e.preventDefault();
       hamburger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
-    });
+    }
+ 
+    hamburger.addEventListener('click', toggleMobileMenu);
+    hamburger.addEventListener('touchend', toggleMobileMenu);
+ 
     mobileMenu.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         hamburger.classList.remove('open');
@@ -73,6 +79,8 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
  
     /* ===== SCROLL ANIMATIONS ===== */
+    const revealEls = document.querySelectorAll('.proyecto-card, .servicio-card');
+ 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -82,12 +90,18 @@
           observer.unobserve(el);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
  
-    document.querySelectorAll('.proyecto-card, .servicio-card').forEach((el, i) => {
+    revealEls.forEach((el, i) => {
       el.dataset.delay = i * 120;
       observer.observe(el);
     });
+ 
+    // Fallback: si por algún motivo el observer no dispara (algunos navegadores móviles
+    // antiguos o webviews), forzamos visibilidad tras 2.5s para que nunca quede oculto.
+    setTimeout(() => {
+      revealEls.forEach(el => el.classList.add('visible'));
+    }, 2500);
  
     /* ===== NAV scroll ===== */
     window.addEventListener('scroll', () => {
