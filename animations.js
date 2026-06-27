@@ -40,12 +40,25 @@
     document.querySelectorAll('.proyecto-card').forEach(card => {
       card.addEventListener('click', () => {
         const src = card.dataset.src;
-        modalVideo.src = src;
+        modalVideo.muted = true; // permite autoplay en todos los navegadores
+        modalVideo.src = encodeURI(src);
         modalVideo.load();
-        modalVideo.play().catch(() => {});
+ 
         modalOverlay.classList.add('open');
         document.body.style.overflow = 'hidden';
+ 
+        modalVideo.play().then(() => {
+          // si reprodujo bien, se puede quitar el mute
+          modalVideo.muted = false;
+        }).catch(err => {
+          console.log('Autoplay bloqueado, esperando interacción:', err);
+        });
       });
+    });
+ 
+    // Si el video falla en cargar, avisar en consola y cerrar el loader visual
+    modalVideo.addEventListener('error', () => {
+      console.error('No se pudo cargar el video:', modalVideo.src);
     });
  
     function closeModal() {
