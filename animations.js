@@ -1,4 +1,4 @@
-    /* ===== HAMBURGER ===== */
+/* ===== HAMBURGER ===== */
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
@@ -86,10 +86,14 @@
         ? 'rgba(8,15,32,0.80)'
         : 'rgba(12,20,40,0.55)';
  
-      // Hero content fades out as user scrolls down
+      // Hero content fades out as user scrolls down, but only near the end of the section
       const heroContent = document.getElementById('heroContent');
-      const heroH = document.getElementById('inicio').offsetHeight;
-      const progress = Math.min(scrolled / (heroH * 0.45), 1);
+      const heroSection = document.getElementById('inicio');
+      const heroH = heroSection.offsetHeight;
+      const fadeStart = heroH * 0.55;
+      const fadeEnd = heroH * 0.95;
+      let progress = (scrolled - fadeStart) / (fadeEnd - fadeStart);
+      progress = Math.max(0, Math.min(progress, 1));
       if (heroContent) {
         heroContent.style.opacity = 1 - progress;
         heroContent.style.transform = `translateY(${progress * 30}px)`;
