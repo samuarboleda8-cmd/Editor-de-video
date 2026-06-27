@@ -116,7 +116,11 @@
       cursor: pointer;
       background: none;
       border: none;
-      padding: 4px;
+      padding: 10px;
+      position: relative;
+      z-index: 950;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
     }
     .hamburger span {
       display: block;
@@ -145,7 +149,7 @@
       flex-direction: column;
       padding: 1.2rem 1.5rem;
       gap: 1rem;
-      z-index: 899;
+      z-index: 940;
       box-shadow: 0 8px 32px rgba(0,0,0,0.4);
     }
     .mobile-menu.open { display: flex; }
