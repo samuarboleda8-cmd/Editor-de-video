@@ -1,7 +1,4 @@
-    /* ===== RESET & VARIABLES ===== */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
- 
-    :root {
+  :root {
       --blue:       #1a6fff;
       --blue-light: #4d8fff;
       --blue-glow:  rgba(26,111,255,0.35);
