@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samuel Arboleda - Editor de Video</title>}
-   <link rel="icon" href="LOGO KLOVR.png">
+  <title>Samuel Arboleda - Editor de Video</title>
+  <link rel="icon" href="LOGO KLOVR.png">
   <link rel="stylesheet" href="landing.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
     </head>
 <body>
-
-<!-- NAV -->
+ 
+ <!-- NAV -->
   <nav id="navbar">
     <a href="#inicio" class="nav-brand">
       <img src="IMG_20260311_201438.jpg" alt="Samuel" class="nav-avatar" />
@@ -43,7 +43,7 @@
     <div class="hero-badge">EDITOR &amp; CREADOR DE CONTENIDO</div>
     <h1 class="hero-title">SAMUEL<br><span class="blue">MACHADO</span></h1>
     <div class="tool-badges">
-      <img src="DaVinci_Resolve_Studio.png" alt="DaVinci Resolve" style="width:56px;height:56px;border-radius:14px;object-fit:cover;" />
+      <img src="DaVinci_Resolve_Studio.png" alt="DaVinci Resolve" style="width:56px;height:56px;border-radius:14px;object-fit:cover;opacity:0;animation:fadeUp .7s .55s ease forwards;" />
     </div>
     <p class="hero-sub">
       Transformo tus videos en grabaciones que <span class="hl">atrapan y venden</span>.<br>
@@ -56,8 +56,8 @@
  
     <div class="demo-wrap">
       <p class="demo-label">Demo Reel</p>
-      <video class="video-demo" controls autoplay muted loop playsinline>
-        <source src="DEMO REEL.mov" type="video/mp4">
+      <video autoplay muted loop playsinline controls>
+        <source src="DEMO REEL.mp4" type="video/mp4">
         Tu navegador no soporta el video.
       </video>
     </div>
@@ -204,3 +204,5 @@
     </div>
     <p class="footer-copy">© 2026 Samuel Machado. Todos los derechos reservados.</p>
   </footer>
+  <script src="animations.js"></script>
+ </body>
